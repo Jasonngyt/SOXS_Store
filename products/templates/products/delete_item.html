@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Are you sure you want to remove {{products.name}}?</h1>
+    <form method='POST' action='{% url "confirm_delete_products" products_id=products.id %}'>
+        {% csrf_token %}
+        <input type='submit' value='Confirm Delete'>
+        <a href='{% url "show_products" %}'>No</a>
+    </form>
+</body>
+</html>
