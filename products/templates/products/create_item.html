@@ -10,7 +10,8 @@
 </head>
 <body>
     {% load crispy_forms_tags %}
-     <form method='POST'>
+    {{ form.media }}
+     <form method='POST' enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
         <input type='submit' value='Add Product'/>

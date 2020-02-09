@@ -7,11 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    {{ form.media }}
-    <form method='POST'  enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type='submit' value='Update Product'/>
-    </form>
+    <h1>Profile</h1>
+    <p>Username: {{current_user.username}}</p>
 </body>
 </html>

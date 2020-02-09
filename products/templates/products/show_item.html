@@ -16,6 +16,11 @@
         <li>{{p.price}}</li> 
         <li>{{p.stock}}</li>  
         <li>{{p.category}}</li>
+        <li>
+            {%if p.image %}
+            <img src="{{p.image.cdn_url}}"/>
+            {%endif%}
+        </li>
         <a href="{% url 'update_products' products_id=p.id %}">Update Product</a>
         <a href="{% url 'delete_products' products_id=p.id %}">Delete Product</a>
         <br> 
