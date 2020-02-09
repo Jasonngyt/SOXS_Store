@@ -130,3 +130,5 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 
 LOGIN_REDIRECT_URL = '/products'
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
