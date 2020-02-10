@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+    
+    {% load crispy_forms_tags %}
+    
     <h1>Products</h1>
+    
+     <form method='GET'>
+        {{search_products|crispy}}
+        <input type='submit' value='Search'/>
+    </form>
+    
     <ul>
     {% for p in all_products %}
         <li>{{p.name}}</li>

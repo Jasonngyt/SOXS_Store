@@ -1,13 +1,24 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Products
-from .forms import ProductForm
+from .forms import ProductForm, ProductsSearch
 
 # Create your views here.
 
 def show_products(request):
+    form  = ProductsSearch()
     all_products = Products.objects.all()
-    return render(request, 'products/show_item.html', {
-        'all_products':all_products
+    if request.GET.get('search_terms'):
+        all_products = all_products.filter(name__contains=request.GET.get('search_terms'))
+    
+    if request.GET.get('min_price'):
+        all_products = all_products.filter(price__gte=request.GET.get('min_price'))
+    
+    if request.GET.get('max_price'):
+        all_products = all_products.filter(price__lte=request.GET.get('max_price'))
+        
+    return render(request, 'products/show_items.html', {
+        'all_products':all_products,
+        'search_products':form
     })
 
 
@@ -51,3 +62,4 @@ def confirm_delete_products(request, products_id):
     products_being_deleted = get_object_or_404(Products, pk=products_id)
     products_being_deleted.delete()
     return redirect(reverse('show_products'))
+
