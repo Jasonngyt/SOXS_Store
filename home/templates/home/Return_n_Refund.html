@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <div class="bg-light py-3 pt-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="{% url 'home' %}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Return & Refund</strong></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container"> 
+    <div class="col-md-12 text-center border-bottom mb-5 pt-5">
+        <h2 class="text-black h4 text-uppercase">Return & Refund</h2>
+    </div>
+    
+    <!-- Return Policy extracted from https://support.happysocks.com/hc/en-ca/articles/206727883-What-is-your-Return-Policy- -->
+   <div>
+        <p><strong>WHAT IS YOUR RETURN POLICY? </strong></p>
+        <p>
+            You have the right to return all products you have bought from www.happysocks.com for a full refund or exchange within 30 days of receiving them.<br>
+
+            All items have to be unused with labels and packaging intact. When you return or exchange any product, you must cover the shipping charges. As soon as we receive your return, we will process your exchange or refund request. Please note that you will not be reimbursed for the original shipping charges. Any refunds made by us will be processed back to the original payment method when you placed your order.<br>
+
+            We do not take responsibility for any items lost during the return shipping.
+            
+        </p><br>
+
+        <p><strong>HOW DO I RETURN OR EXCHANGE MY SOXS PRODUCTS? </strong></p>
+    
+        <p>1. Please drop us an email at <a href="mailto:admin@soxs_store.com">admin@soxs-store.com</a> and include a printout copy in your package.</p>
+        
+        <p>2. Send your items to the address below, </p>
+        <p><strong>&emsp;&emsp; 8 Bishan Place Singapore 579837</strong></p> 
+  
+       
+       <p>3. Send your items with the label intact along with the order number</p>
+       
+       <p>4. Include instructions on how we should process your return (e.g. for refund, for exchange to another size, style, etc.)</p>
+
+       <p>5. For exchanges, please clarify the alternative product by specifying SKU/item number and size (please note that exchanges must be for applicable products of equal or lesser value)</p>
+
+       <p>6. As soon as we receive your return shipment, we aim to process your request within 3 business days and will send you an email confirmation once processed. Please note that we cannot cover return shipping costs and that you are responsible for items lost in shipping.</p>
+
+</div>
+{% endblock %}

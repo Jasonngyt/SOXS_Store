@@ -6,7 +6,6 @@ from products.models import Products
 # Create your views here.
 def view_cart(request):
     cart = request.session.get('shopping_cart', {})
-    
     return render(request, 'cart/view_cart.html', {
         'shopping_cart':cart
     })
@@ -38,5 +37,5 @@ def remove_cart(request, products_id):
         request.session['shopping_cart'] = cart
         messages.success(request, "Product successfully removed from cart!")
     
-    return redirect('/products/')
+    return redirect('/cart/')
         

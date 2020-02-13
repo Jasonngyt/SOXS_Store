@@ -1,41 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-    {% load crispy_forms_tags %}
-    
-    <h1>Products</h1>
-    
-     <form method='GET'>
-        {{search_products|crispy}}
-        <input type='submit' value='Search'/>
-    </form>
-    
-    <ul>
-    {% for p in all_products %}
-        <li>{{p.name}}</li>
-        <li>{{p.material}}</li>  
-        <li>{{p.size}}</li>  
-        <li>{{p.price}}</li> 
-        <li>{{p.stock}}</li>  
-        <li>{{p.category}}</li>
-        <li>
-            {%if p.image %}
-            <img src="{{p.image.cdn_url}}"/>
-            {%endif%}
-        </li>
-        <a href="{% url 'update_products' products_id=p.id %}">Update Product</a>
-        <a href="{% url 'delete_products' products_id=p.id %}">Delete Product</a>
-        <br> 
-    {% endfor %}
-    </ul>
+{% block content %}
 
-</body>
-</html>
+
+    <div class="bg-light py-3 pt-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="../home">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Shop</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+
+        <div class="row mb-5">
+          <div class="col-lg-9 order-2 order-lg-1">
+
+            <div class="row align">
+              <div class="col-md-12 mb-5">
+                <div class="float-md-left"><h2 class="text-black h5">Shop All</h2></div>
+              </div>
+            </div>
+            
+            <div class="row mb-5">
+              <div class="products-wrap border-top-0">
+  <div class="container-fluid">
+    <div class="row no-gutters products">
+      {% for p in all_products %}
+        <div class="col-6 col-md-6 col-lg-6 border-top">
+          {%if p.image %}
+            <img src="{{p.image.cdn_url}}" alt="Image" class="img-fluid">
+          {%endif%}
+          <div class="item-info text-dark">
+            <h3>{{p.name}}</h3>
+            <h5 class="collection d-block text-secondary">{{p.category}} Collection</h5>
+            <span class="collection d-block">{{p.material}}</span>
+            <span class="collection d-block">{{p.size}}</span><br>
+            <h4 class="price">${{p.price|floatformat:2}}</h4>
+            <p><a href="/cart/add/{{p.id}}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+          </div>
+        </div>
+      {% endfor %}
+   
+    </div>
+  </div>
+</div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <div class="site-block-27">
+                  <ul>
+                    <li><a href="#">&lt;</a></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&gt;</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 order-1 order-lg-2 mb-5 mb-lg-0">
+            <div class="border p-4 mb-4">
+              <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a href='{% url "show_products" category="MEN" %}' class="d-flex"><span>Men</span></a></li>
+                <li class="mb-1"><a href='{% url "show_products" category="WOMEN" %}'  class="d-flex"><span>Women</span></a></li>
+                <li class="mb-1"><a href='{% url "show_products" category="KIDS" %}' class="d-flex"><span>Kids</span></a></li>
+              </ul>
+            </div>
+
+            <div class="border p-4 mb-4">
+              <div class="mb-4">
+                <form id="price_filter">
+                  <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
+                <div id="slider-range" class="border-primary"></div>
+                <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
+                <input type="hidden" name="min_price" id="min_amount" value="{{min_price}}"/>
+                <input type="hidden" name="max_price" id="max_amount" value="{{max_price}}"/>
+                </form>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+{% endblock %}

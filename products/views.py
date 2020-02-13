@@ -4,21 +4,32 @@ from .forms import ProductForm, ProductsSearch
 
 # Create your views here.
 
-def show_products(request):
+def show_products(request,category=""):
     form  = ProductsSearch()
+    print(category)
     all_products = Products.objects.all()
+    min_price=1
+    max_price=99
     if request.GET.get('search_terms'):
         all_products = all_products.filter(name__contains=request.GET.get('search_terms'))
     
+    if category != "":
+        all_products = all_products.filter(category__category__exact=category)    
+    
     if request.GET.get('min_price'):
         all_products = all_products.filter(price__gte=request.GET.get('min_price'))
+        min_price=request.GET.get('min_price')
     
     if request.GET.get('max_price'):
         all_products = all_products.filter(price__lte=request.GET.get('max_price'))
+        max_price=request.GET.get('max_price')
         
+    print(min_price,max_price)
     return render(request, 'products/show_items.html', {
         'all_products':all_products,
-        'search_products':form
+        'search_products':form,
+        'min_price':min_price,
+        'max_price':max_price,
     })
 
 
@@ -62,4 +73,3 @@ def confirm_delete_products(request, products_id):
     products_being_deleted = get_object_or_404(Products, pk=products_id)
     products_being_deleted.delete()
     return redirect(reverse('show_products'))
-
