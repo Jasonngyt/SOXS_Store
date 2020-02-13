@@ -49,6 +49,7 @@
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li class="has-children active">
                   <a href='' >Catalogs</a>
                   <ul class="dropdown">
@@ -58,9 +59,14 @@
                   </ul>
                 </li>
                 
+                <!-- check if user log in, change to log out link when user log in -->
                 <li><a href="{% url 'show_products' %}">Shop</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                {% if user.is_authenticated %}
+                  <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% else %}
+                  <li><a href="{% url 'login' %}">Log In</a></li>
+                {% endif %}
+                
               </ul>
             </nav>
           </div>
@@ -88,7 +94,7 @@
             <div class="block-7">
               <h3 class="footer-heading mb-4">About Us</h3>
               <p class="text-dark">Here at SOXS, we’re all about the little things that brighten your day!</p>
-              <a href="#">CLick here to find out more</a>
+              <a href="{% url 'about' %}">CLick here to find out more</a>
             </div>
            
           </div>

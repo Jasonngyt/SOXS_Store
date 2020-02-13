@@ -6,6 +6,11 @@ from products.models import Products
 # Create your views here.
 def view_cart(request):
     cart = request.session.get('shopping_cart', {})
+    # grand_total = 0
+    # for idx,cart_item in cart.items():
+        
+    #     cart_item['total'] = "asd" 
+    #     print (cart_item)
     return render(request, 'cart/view_cart.html', {
         'shopping_cart':cart
     })

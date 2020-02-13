@@ -15,3 +15,6 @@ def tnc(request):
     
 def return_policy(request):
     return render(request, 'home/Return_n_Refund.html')
+
+def about(request):
+    return render(request, 'home/about.html')

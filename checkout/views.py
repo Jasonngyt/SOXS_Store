@@ -43,7 +43,7 @@ def checkout_success(request):
     return render(request, 'checkout/thankyou.html')
     
 def checkout_cancelled(request):
-    return HttpResponse("Checkout cancelled")
+    return render(request, 'products/show_items.html')
     
 @csrf_exempt
 def payment_completed(request):

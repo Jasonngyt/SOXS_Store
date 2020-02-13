@@ -8,7 +8,6 @@ class Products(models.Model):
     material = models.CharField(blank=False, max_length=255)
     size = models.CharField(blank=False, max_length=255)
     price = models.FloatField(blank=False)
-    stock = models.IntegerField(blank=False)
     category = models.ForeignKey('Category', blank=True, null=True, on_delete=models.SET_NULL)
     
     image = ImageField(null=True)

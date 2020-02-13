@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="bg-light py-3 pt-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="{% url 'home' %}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Log Out</strong></div>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="container"> 
+    <div class="col-md-12 text-center border-bottom mb-5 pt-5 ">
+        <h2 class="text-black h4 text-uppercase">Log Out</h2>
+    </div>
+    
+   
+        <div class="container pt-5 pb-3 d-flex justify-content-center">
+            
+            
+            <a href="{% url 'login'%}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Click here to login again.</a>
+            
+          
+        </div>
+        
+
+{% endblock %}
+
+      
+
+
+
+

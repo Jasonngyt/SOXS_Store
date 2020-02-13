@@ -5,7 +5,7 @@ from pyuploadcare.dj.forms import ImageField
 class ProductForm(forms.ModelForm):
     class Meta:
         model=Products
-        fields=('name', 'material', 'size', 'price', 'stock', 'category', 'image')
+        fields=('name', 'material', 'size', 'price', 'category', 'image')
 
 class ProductsSearch(forms.Form):
     search_terms = forms.CharField(required=False)
