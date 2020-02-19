@@ -1,17 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
+
+<head>
+
     {% load static %}
-    
+
     <title>SOXs &mdash; Your Comfort Socks Store</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'fonts/icomoon/style.css' %}">
-
+    
+    <!--CSS Stylesheet & Boostrap-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}">
@@ -19,140 +21,152 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}">
-
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    
-  </head>
-  <body>
-  
-  <div class="site-wrap">
-    
 
-    <div class="site-navbar bg-white py-2">
+</head>
 
-      <div class="search-wrap">
-        <div class="container">
-          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
-          <form action="{% url 'show_products' %}"  method="GET">
-            <input type="text" name='search_terms' class="form-control" placeholder="Search Products and hit enter...">
-          </form>  
-        </div>
-      </div>
+<body>
 
-      <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="logo">
-            <div class="site-logo">
-              <a href='{% url "home" %}' class="js-logo-clone">SOXs</a>
+    <div class="site-wrap">
+
+        <div class="site-navbar bg-white py-2">
+
+            <div class="search-wrap">
+                <div class="container">
+                    <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+                    <form action="{% url 'show_products' %}" method="GET">
+                        <input type="text" name='search_terms' class="form-control" placeholder="Search Products and hit enter...">
+                    </form>
+                </div>
             </div>
-          </div>
-          <div class="main-nav d-none d-lg-block">
-            <nav class="site-navigation text-right text-md-center" role="navigation">
-              <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li class="has-children active">
-                  <a href='' >Catalogs</a>
-                  <ul class="dropdown">
-                    <li><a href='{% url "show_products" category="MEN" %}' >Men</a></li>
-                    <li><a href='{% url "show_products" category="WOMEN" %}' >Women</a></li>
-                    <li><a href='{% url "show_products" category="KIDS" %}' >Kids</a></li>
-                  </ul>
-                </li>
-                
-                <!-- check if user log in, change to log out link when user log in -->
-                <li><a href="{% url 'show_products' %}">Shop</a></li>
-                {% if user.is_authenticated %}
-                  <li><a href="{% url 'logout' %}">Log Out</a></li>
-                {% else %}
-                  <li><a href="{% url 'login' %}">Log In</a></li>
-                {% endif %}
-                
-              </ul>
-            </nav>
-          </div>
-          <div class="icons">
-            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="/cart/" class="icons-btn d-inline-block bag">
-              <span class="icon-shopping-bag"></span>
-              <span class="number">{{number_of_items}}</span>
-            </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
-          </div>
+
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+
+                    <div class="logo">
+                        <div class="site-logo">
+                            <a href='{% url "home" %}' class="js-logo-clone">SOXs</a>
+                        </div>
+                    </div>
+
+                    <div class="main-nav d-none d-lg-block">
+                        <nav class="site-navigation text-right text-md-center" role="navigation">
+                            <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li class="has-children active">
+                                    <a href=''>Catalogs</a>
+                                    <ul class="dropdown">
+                                        <li><a href='{% url "show_products" category="MEN" %}'>Men</a></li>
+                                        <li><a href='{% url "show_products" category="WOMEN" %}'>Women</a></li>
+                                        <li><a href='{% url "show_products" category="KIDS" %}'>Kids</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- check if user log in, change to log out link when user log in -->
+                                <li><a href="{% url 'show_products' %}">Shop</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                                {% else %}
+                                <li><a href="{% url 'login' %}">Log In</a></li>
+                                {% endif %}
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="icons">
+                        <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+                        <a href="/cart/" class="icons-btn d-inline-block bag">
+                            <span class="icon-shopping-bag"></span>
+                            <span class="number">{{number_of_items}}</span>
+                        </a>
+                        <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+                    </div>
+
+                </div>
+            </div>
         </div>
-      </div>
+
+        {% block content %}
+
+        <!-- page content here -->
+
+        {% endblock %}
+
+        <!-- Footer -->
+        <footer class="site-footer custom-border-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="block-7">
+                            <h3 class="footer-heading mb-4">About Us</h3>
+                            <p class="text-dark">Here at SOXS, we’re all about the little things that brighten your day!</p>
+                            <a href="{% url 'about' %}">CLick here to find out more</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="footer-heading mb-4">Support</h3>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                    <li><a href="{% url 'return_policy' %}">Returns & Refunds</a></li>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                                    <li><a href="{% url 'tnc' %}">Terms and Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="block-5 mb-5">
+                            <h3 class="footer-heading mb-4">Contact Info</h3>
+                            <ul class="list-unstyled">
+                                <li class="address">8 Bishan Place Singapore 579837</li>
+                                <li class="phone">+65 65657654</a>
+                                </li>
+                                <li class="email"><a href="mailto:admin@soxs_store.com">admin@soxs-store.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Customised using Colorlib template -->
+                <div class="row pt-5 mt-5 text-center">
+                    <div class="col-md-12">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
     </div>
 
-    {% block content %}
-   
-    {% endblock %}
+    <!-- Javascript -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
-    <footer class="site-footer custom-border-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-            
-            <div class="block-7">
-              <h3 class="footer-heading mb-4">About Us</h3>
-              <p class="text-dark">Here at SOXS, we’re all about the little things that brighten your day!</p>
-              <a href="{% url 'about' %}">CLick here to find out more</a>
-            </div>
-           
-          </div>
-          <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Support</h3>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="{% url 'faq' %}">FAQ</a></li>
-                  <li><a href="{% url 'return_policy' %}">Returns & Refunds</a></li>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
-                  <li><a href="{% url 'tnc' %}">Terms and Conditions</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-3">
-            <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Contact Info</h3>
-              <ul class="list-unstyled">
-                <li class="address">8 Bishan Place Singapore 579837</li>
-                <li class="phone">+65 65657654</a></li>
-                <li class="email"><a href="mailto:admin@soxs_store.com">admin@soxs-store.com</a></li>
-              </ul>
-            </div>
+</body>
 
-            
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-          
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-  <script src="{% static 'js/jquery-ui.js' %}"></script>
-  <script src="{% static 'js/popper.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'js/aos.js' %}"></script>
-
-  <script src="{% static 'js/main.js' %}"></script>
-    
-  </body>
 </html>

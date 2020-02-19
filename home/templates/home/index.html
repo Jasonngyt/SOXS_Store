@@ -1,59 +1,63 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} 
+
+{% load static %} 
 
 {% block content %}
 
+    <div class="site-blocks-cover" data-aos="fade">
+        <div class="container">
+            <div class="row align-items-center">
 
-  <div class="site-blocks-cover" data-aos="fade">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5 text-center">
-          <div class="featured-hero-product w-100">
-            <h1 class="mb-2">Your Comfort Socks Store</h1>
-            <h4>Walk This Way</h4>
-            <p><a href="../products/" class="btn btn-primary rounded-0">Shop Now</a></p>
-          </div>  
-        </div>
-        <div class="col-lg-7 align-self-end text-center text-lg-right">
-          <img src="{% static 'images/socks_background.png' %}" alt="Image" class="img-fluid img-1">
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-  
-  <!--MENS, WOMEN, KIDS Catalogs-->
-  <div class="products-wrap pt-5 pb-5 border-top-0">
-    <div class="container-fluid">
-      <div class="row no-gutters products">
-        <div class="col-6 col-md-6 col-lg-4">
-          <a href='{% url "show_products" category="MEN" %}'  class="item">
-            <img src="{% static 'images/men_socks.jpg' %}" alt="Men_Catalog" class="img-fluid">
-            <div class="item-info">
-              <span><h2 class="text-white pb-5 mb-5">MEN</h2></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4">
-          <a href='{% url "show_products" category="WOMEN" %}' class="item">
-            <img src="{% static 'images/women_socks.jpg' %}" alt="Women_Catalog" class="img-fluid">
-            <div class="item-info">
-              <h3 class="text-muted pb-5 mb-5"><mark class='bg-white'>WOMEN</mark></h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4">
-          <a href='{% url "show_products" category="KIDS" %}' class="item">
-            <img src="{% static 'images/kids_socks.jpg' %}" alt="Kids_Catalog" class="img-fluid">
-            <div class="item-info">
-              <h2 class="text-white pb-5 mb-5">KIDS</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="col-lg-5 text-center">
+                    <div class="featured-hero-product w-100">
+                        <h1 class="mb-2">Your Comfort Socks Store</h1>
+                        <h4>Walk This Way</h4>
+                        <p><a href="../products/" class="btn btn-primary rounded-0">Shop Now</a></p>
+                    </div>
+                </div>
 
+                <div class="col-lg-7 align-self-end text-center text-lg-right">
+                    <img src="{% static 'images/socks_background.png' %}" alt="Image" class="img-fluid img-1">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--MENS, WOMEN, KIDS Catalogs-->
+    <div class="products-wrap pt-5 pb-5 border-top-0">
+        <div class="container-fluid">
+            <div class="row no-gutters products">
+
+                <div class="col-6 col-md-6 col-lg-4">
+                    <a href='{% url "show_products" category="MEN" %}' class="item">
+                        <img src="{% static 'images/men_socks.jpg' %}" alt="Men_Catalog" class="img-fluid">
+                        <div class="item-info">
+                            <span><h2 class="text-white pb-5 mb-5">MEN</h2></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-4">
+                    <a href='{% url "show_products" category="WOMEN" %}' class="item">
+                        <img src="{% static 'images/women_socks.jpg' %}" alt="Women_Catalog" class="img-fluid">
+                        <div class="item-info">
+                            <h3 class="text-muted pb-5 mb-5"><mark class='bg-white'>WOMEN</mark></h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-4">
+                    <a href='{% url "show_products" category="KIDS" %}' class="item">
+                        <img src="{% static 'images/kids_socks.jpg' %}" alt="Kids_Catalog" class="img-fluid">
+                        <div class="item-info">
+                            <h2 class="text-white pb-5 mb-5">KIDS</h2>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

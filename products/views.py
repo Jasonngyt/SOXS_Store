@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Products
 from .forms import ProductForm, ProductsSearch
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
 
@@ -33,7 +33,7 @@ def show_products(request,category=""):
         'max_price':max_price,
     })
 
-@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def create_products(request):
     if request.method == 'POST':
         create_products_form = ProductForm(request.POST)
@@ -47,7 +47,7 @@ def create_products(request):
         'form':create_products_form
     })
     
-@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def update_products(request, products_id):
     products_being_updated = get_object_or_404(Products, pk=products_id)
     
@@ -64,14 +64,14 @@ def update_products(request, products_id):
         'form':update_products_form
     })
 
-@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def delete_products(request, products_id):
     products_being_deleted = get_object_or_404(Products, pk=products_id)
     return render(request, 'products/delete_item.html', {
         'products':products_being_deleted
     })
 
-@login_required    
+@user_passes_test(lambda u: u.is_superuser)  
 def confirm_delete_products(request, products_id):
     products_being_deleted = get_object_or_404(Products, pk=products_id)
     products_being_deleted.delete()

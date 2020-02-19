@@ -15,14 +15,16 @@ def checkout(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
     
     cart = request.session.get('shopping_cart', {})
-    
+    # inp_value = request.GET.get('inp_quantity')
+    # print(inp_value)
+
     line_items = []
     for id, products in cart.items():
         products = get_object_or_404(Products, pk=id)
         line_items.append({
             'name' : products.name,
             'amount': int(products.price * 100),
-            'currency' : 'usd',
+            'currency' : 'sgd',
             'quantity' : 1
         })
       

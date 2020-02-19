@@ -1,111 +1,104 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} 
+
+{% load static %} 
 
 {% block content %}
 
 
     <div class="bg-light py-3 pt-5">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-md-12 mb-0"><a href="{% url 'home' %}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">FAQ</strong></div>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-12 mb-0"><a href="{% url 'home' %}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">FAQ</strong></div>
+            </div>
         </div>
-      </div>
     </div>
-    
-    <div class="container"> 
-    <div class="col-md-12 text-center border-bottom mb-5 pt-5">
-        <h2 class="text-black h4 text-uppercase">FAQ</h2>
-    </div>
-    
-    <!-- FAQ Expand and Collapse Bootstrap Feature -->
-    <!-- Privacy Policy extracted from https://support.happysocks.com/hc/en-ca -->
-    <div id="accordion">
-        
-        
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              CAN I AMEND MY ORDER OR ADDRESS AFTER I HAVE PLACED IT?
-            </button>
-          </h5>
-        </div>
-    
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-          <div class="card-body">
-           Regrettably it is difficult to change your order or the shipping address once it has been placed. We aim to ship all orders as fast as 
-           possible so our warehouse is processing them within 15 minutes of receiving them.
-           If a change is necessary please contact us and we will do our best to help you.
-          </div>
-        </div>
-      </div>
-      
-      
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              HOW LONG DOES THE DELIVERY TAKE?
-            </button>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-          <div class="card-body">
-            All orders are shipped with standard postal services from our warehouse in the Singapore. The delivery time depends on the destination country and you can find our country specific shipping overview here:<br><br>
-                <ul>
-                    <li>Shipping times Global (if your delivery address is located outside the European Union)</li>
-                    <li>Shipping times EU (if your delivery address is located within the European Union)</li>
-                </ul>
-            Please keep in mind that all times are estimates and depend on the local postal service in your country.
-          </div>
-        </div>
-      </div>
-      
-      
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              HOW CAN I TRACK MY ORDER?
-            </button>
-          </h5>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body">
-            We currently don't offer tracked shipping.
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingFour">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              WHAT SHOULD I DO IF MY ORDER HASN'T BEEN DELIVERED YET?
-            </button>
-          </h5>
-        </div>
-    
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-          <div class="card-body">
-           You can find the estimated delivery time for your order in your shipping confirmation email. Please note that it is calculated in business days (Mon-Fri). 
-           Since all orders are shipped by standard mail, the exact delivery time depends on your local postal service.<br><br>
 
-           Please allow for the estimated delivery time plus a few extra business days (Mon-Fri) to pass. If your order does not arrive within the estimated time, 
-           it is most likely just a bit delayed but will still arrive within the next couple of days.<br><br>
-            
-           If your estimated delivery date has passed by more than five business days and you haven’t received your order, please contact us so we can help you further. <br><br>
-            
-           Please note that during final sales and the holiday season (November/December) delivery times can be longer than usual.
-          </div>
+    <div class="container">
+        <div class="col-md-12 text-center border-bottom mb-5 pt-5">
+            <h2 class="text-black h4 text-uppercase">FAQ</h2>
         </div>
-      </div>
-      
-      
+
+        <!-- FAQ Expand and Collapse Bootstrap Feature -->
+        <!-- Privacy Policy extracted from https://support.happysocks.com/hc/en-ca -->
+        <div id="accordion">
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                CAN I AMEND MY ORDER OR ADDRESS AFTER I HAVE PLACED IT?
+                </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Regrettably it is difficult to change your order or the shipping address once it has been placed. We aim to ship all orders as fast as possible so our warehouse is processing them within 15 minutes of receiving them. If a change is necessary please contact
+                        us and we will do our best to help you.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                HOW LONG DOES THE DELIVERY TAKE?
+                </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        All orders are shipped with standard postal services from our warehouse in the Singapore. The delivery time depends on the destination country and you can find our country specific shipping overview here:<br><br>
+                        <ul>
+                            <li>Shipping times Global (if your delivery address is located outside the European Union)</li>
+                            <li>Shipping times EU (if your delivery address is located within the European Union)</li>
+                        </ul>
+                        Please keep in mind that all times are estimates and depend on the local postal service in your country.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                HOW CAN I TRACK MY ORDER?
+                </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        We currently don't offer tracked shipping.
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                WHAT SHOULD I DO IF MY ORDER HASN'T BEEN DELIVERED YET?
+                </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        You can find the estimated delivery time for your order in your shipping confirmation email. Please note that it is calculated in business days (Mon-Fri). Since all orders are shipped by standard mail, the exact delivery time depends on your local postal
+                        service.<br><br> Please allow for the estimated delivery time plus a few extra business days (Mon-Fri) to pass. If your order does not arrive within the estimated time, it is most likely just a bit delayed but will
+                        still arrive within the next couple of days.<br><br> If your estimated delivery date has passed by more than five business days and you haven’t received your order, please contact us so we can help you further. <br><br> Please note
+                        that during final sales and the holiday season (November/December) delivery times can be longer than usual.
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-    
-    
-    
-    </div>
+
 
 {% endblock %}
