@@ -17,6 +17,7 @@ def view_cart(request):
         
     return render(request, 'cart/view_cart.html', {
         'shopping_cart':cart,
+        'total':total
     })
 
 
