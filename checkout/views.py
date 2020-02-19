@@ -9,15 +9,12 @@ from django.views.decorators.csrf import csrf_exempt
 
 endpoint_secret = 'whsec_ySyA8VU4jKYPv6M4WJG7xJCOUFoZPkj6'
 
-# Create your views here.
 
 def checkout(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
     
     cart = request.session.get('shopping_cart', {})
-    # inp_value = request.GET.get('inp_quantity')
-    # print(inp_value)
-
+ 
     line_items = []
     for id, products in cart.items():
         products = get_object_or_404(Products, pk=id)
@@ -40,13 +37,25 @@ def checkout(request):
         'public_key' : settings.STRIPE_PUBLISHABLE_KEY
     })
 
+
 def checkout_success(request):
     request.session['shopping_cart'] = {}
     return render(request, 'checkout/thankyou.html')
-    
+
+
+
 def checkout_cancelled(request):
-    return render(request, 'products/show_items.html')
+    all_products = Products.objects.all()
+    min_price=1
+    max_price=99
     
+    return render(request, 'products/show_items.html', {
+        'all_products':all_products,
+        'min_price':min_price,
+        'max_price':max_price
+    })
+  
+   
 @csrf_exempt
 def payment_completed(request):
     payload = request.body
