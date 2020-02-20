@@ -78,3 +78,205 @@ The theme that I wished to present is simple and user-friendly website as per th
 ● <a href="https://uploadcare.com/">**Uploadcare**</a> - The project usess Uploadcare for uploading all the products images. <br>
 ● <a href="https://github.com/">**GitHub**</a> - The project uses GitHub as it's version control system. <br>
 ● <a href="https://id.heroku.com/login">**Heroku**</a> - The project uses the Heroku platform for hosting the website. <br><br>
+
+## Testing
+### Manual Testing
+
+Test Case(s) | Test Description | Result
+--- | --- | --- |
+
+### Responsiveness
+The websites are tested on mobile phone and desktop. In addition, the pages are tested using different viewport under the inspector tool. The site is fully responsive - it's mobile and desktop-friendly.,br><br>
+
+#### Website Desktop View
+
+#### Website Mobile View
+
+### Problems Encountered/Bugs solved
+● I was unable to add in filter by price feature in the first place. After going through the main.js with the Teaching Assitance, John. We managed to do it by adjusting adding and adjusting the min and max price into the javascaript file. <br><br>
+
+## Upload Files to Github
+This project was written using AWS Cloud9 IDE, uploaded to Github for version control. <br>
+
+1.At the start of the project, I created my first Index.html file in Cloud9. <br>
+2.Next, I opened a new terminal and type in the git init command to initialize a local repository. <br>
+3.A new remote repository was created with a name SOXS_Store. <br>
+4.After creating the repository in GitHub, I copy the code given back in Cloud9 to link the local repository to the remote one. <br>
+5.Under the new terminal in Cloud9, the Index.html is added using the git add command. <br>
+6.I typed in the command ```git commit -m “Initial commit”```, which puts the file into the staging area for the first commit. <br>
+7.Next, I used the git push command to send the file to the remote repository. <br>
+8.The terminal will prompt for the username and password. <br>
+9.The command git add, ```git commit -m “message”``` and ```git push``` are used to saved the rest of the files and pictures to the remote repository. <br>
+10.I tried to push the code regularly to Github every time there is any updates to the files. It served as a backup as I know I can go back to my history to retrieve my earlier codes if I messed up my current codes in Cloud9. <br>
+
+## Deployed Webpage to Heroku
+The website has been deployed to Heroku with reference to our lecturer Mr Paul Chor’s notes. <br>
+
+### Part A  Dependencies
+**Step 1** Go to <a href ="https://www.heroku.com">Heroku</a> and register for an account. <br>
+**Step 2** Install the Herkou CLI in your system <br>
+In your bash terminal, install the Heroku CLI by running the following command:
+
+```sudo snap install heroku --classic```
+
+**Step 3** Install dependencies
+
+We need to install a few dependencies so that our project can work on Heroku. Run each of the following commands one by one.
+
+```sudo apt install libpq-dev python3-dev```
+
+And the following as well:
+
+```
+sudo pip3 install gunicorn
+sudo pip3 install psycopg2
+sudo pip3 install Pillow
+sudo pip3 install whitenoise
+sudo pip3 install dj_database_url
+```
+
+Add Whitenoise to your middleware inside settings.py:
+```
+MIDDLEWARE = [
+.....
+'whitenoise.middleware.WhiteNoiseMiddleware'
+]
+```
+
+###  Part B Creating the Heroku App
+
+**Step 1** Make sure you already have a git repository for your project.
+If you do not have a .git hidden folder yet or no (master) after your directory name in your terminal, then you do not have a git repo.
+
+Follow the steps below to initialise a new repository.
+
+```
+git init .
+git add .
+git commit -m "Initial commit"
+```
+
+**Step 2** Make sure you have a .gitgnore file
+Check if you have a .gitignore file. If you have it, or not, make sure it looks like this: http://gitignore.io/api/django
+
+Then at the end of the file, add in the following lines
+```
+.c9
+```
+
+**Step 3** Log into Heroku
+Log into Heroku using the following command:
+
+```
+heroku login -i
+```
+
+**Step 4** Create the Heroku App
+
+From this point on, make sure that you have logged into Heroku in your terminal.
+
+Inside the terminal, we are going to create a new Heroku App. Take note that the name for the Heroku app must be unique in the entire universe. So if your app is rejected because the name already exists, try a different name.
+
+```
+heroku create SOXS
+
+```
+
+**Step 5** Double check the Heroku App has been created successfully.
+Heroku will add two origins to your git remotes. Do a check by running the following:
+
+```
+git remote -v
+```
+
+You should see two more origins with the word heroku in the URL.
+
+**Step 6** Copy environment variables over
+
+1. Open your ```.bashrc file``` in Cloud9. 
+2. Open a new browser tab, and go to http://www.heroku.com 
+3. Click on your app in the dashboard.
+4. Click on Settings
+5. Click on Reval Config Vars
+6. Copy the exported variables in .bashrc over to the Config Vars and omit the quotes.
+
+## Part C Getting Ready for First Deployment
+
+**Step 1** Create Procfile
+The ```Procfile``` contains a command that Heroku will run when the app starts. In the root folder, create a file named Procfile
+
+**Step 2** Add Command to Procfile
+Open the Procfile, and enter the following and replace SOXS_Store.
+
+```
+web: gunicorn SOXS_Store.wsgi:application
+```
+
+**Step 3** Update ALLOWED_HOSTS inside settings.py
+
+Add the domain name (AND JUST THE DOMAIN NAME ONLY. i.e without the HTTPS) of the  the heroku app into the ALLOWED_HOST inside settings.py (you can check by going to the app inside your Heroku dashboard, then click the [Open App] button on the upper right corner of the screen).
+
+**Step 4** Generate requirements.txt
+
+We need a requirements.txt file in our Git repository so that Heroku will know what packages install.
+
+```
+pip3 freeze --local > requirements.txt
+```
+
+**Step 5** Add STATIC_ROOT to your settings.py file
+We need this for Whitenoise to work (so that it can serve static files properly):
+
+```
+SOXS_Store/settings.py
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
+
+Also make sure when you use static files in your template, you make use of the {% static .... %} helper.
+
+Example
+```
+{% load static %}
+<img src="{% static "images/hi.jpg" %}" alt="Hi!" />
+
+<!-- DON'T WRITE THIS -->
+<img src="/static/images/hi.jpg" alt="Hi!" />
+```
+
+**Step 6** Deploy
+To deploy Heroku, first, commit your code to your git repo
+
+```
+git add .
+git commit -m "your commit message"
+
+After which, make a push to Heroku:
+
+git push heroku master
+```
+
+## Credits
+The photos in the Home page is taken from: <br>
+● https://www.businessinsider.sg/feetures-socks-review/ <br>
+● https://www.parnellsports.com/shashi <br>
+
+The photos from the About Page is taken from a stock image library called <a href="https://www.pexels.com/">Pexels.</a> <br>
+
+The About Us, Terms and Condition, FAQ, Return and Refunds and Privacy Policy are taken from <a href="https://www.happysocks.com/us/">Happy Socks.</a> <br>
+The products details and images are also taken from <a href="https://www.happysocks.com/us/">Happy Socks.</a>
+
+
+The problems are resolved with reference to similar problems faced by other programmer in <a href="https://stackoverflow.com/">Stackoverflow</a> as well as advice from lecturers.
+
+The styling and features were made with reference to the tutorial from <a href="https://www.w3schools.com/">W3schools.</a>
+
+The Styling of the webpage is cutomised from <a href="https://colorlib.com/wp/template/dealers/">Colorlib template.</a>
+
+### Special Thanks to:
+
+**Code Institute**
+- The Html Fundamentals module, CSS Fundamentals module, Python Fundamentals module,Practical Python module and the Fullstack Frameworks module were used for guidance.
+
+**Our Lecturer, Mr Paul Chor and Teaching Assistant, John**
+
+- For all  the Guidance and Help during lesson and tackling project issue.
