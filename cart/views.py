@@ -8,15 +8,18 @@ from products.models import Products
 
 def view_cart(request):
     cart = request.session.get('shopping_cart', {})
+    subtotal = 0
     total = 0
     
     # Calculate and display total price
     for idx,cart_item in cart.items():
-        total = total + cart_item['price']
+        subtotal = cart_item['price']*cart_item['quantity']
+        total = total + subtotal
         print (cart_item)
-        
+    
     return render(request, 'cart/view_cart.html', {
         'shopping_cart':cart,
+        'subtotal':subtotal,
         'total':total
     })
 
@@ -46,11 +49,8 @@ def add_cart(request, products_id):
         return redirect('/products/')
     else:
         cart[products_id]['quantity']+=1
-        print(cart[products_id]['quantity'])
-        total = round(cart[products_id]['quantity']*float(cart[products_id]['price']),2)
-        # cart[products_id]['total']=round(int(cart[products_id]['quantity'])*float(cart[products_id]['price']),2)
         request.session['shopping-cart'] = cart
-        return redirect('/cart/')
+        return redirect('/products/')
         
         
         
