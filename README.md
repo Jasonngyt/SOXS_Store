@@ -90,6 +90,8 @@ The websites are tested on mobile phone and desktop. In addition, the pages are 
 
 #### Website Desktop View
 
+<img src="/static/Readme_image/desktop_view.jpg">
+
 #### Website Mobile View
 
 ### Problems Encountered/Bugs solved
