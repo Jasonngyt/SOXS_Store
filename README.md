@@ -22,8 +22,6 @@ The store is looking to further the sales of the products by creating a online p
 ### Wire Frame
 The wireframe can be viewed in the link below:
 
-### ER Diagram
-The ER Diagram can be viewed in the link below:
 
 ## Project Skeleton
 
@@ -83,7 +81,57 @@ The theme that I wished to present is simple and user-friendly website as per th
 ### Manual Testing
 
 Test Case(s) | Test Description | Result
---- | --- | --- |
+- | --- | - 
+--- | **Home Page** | ---
+1 | I clicked on the Update Product button which will direct to Update products page with the item detail displayed in the textbox. | Pass 
+2 | I could click on individual link which will bring me to the respective page. <br> ● **About** in Navigation Bar- direct to **About Us Page** <br> ● **FAQ** in Footer- direct to **FAQ Page** <br> ● **Return & Refund** in Footer - direct to **Return & Refund Page** <br> ● **Terms and Condition** in Footer - direct to **Terms and Conditions page** | Pass
+3 | I clicked on the Shop Now Button which will bring me to the show_item.html that displays all the socks | Pass
+4 | I clicked on the picture with MEN, WOMEN and KIDS. It should display on the socks of that category. I should get the same result when I clicked on MEN, WOMEN and KIDS under the Catelog in the Navigation Bar.	| Pass
+5 | I clicked on the magnifying glass in the navigation bar, a textbox should display with prompt message “Search products and hit enter”. <br> I should be able to key in the product name and press enter to conduct the search. It should bring me to show_item page which shows only socks name that match the search keyword. | Pass
+6 |	I clicked on the company email address in the footer. It should open up a new email message with response to the company email address. | Pass
+- |	**Show Item Page** | -
+7 |	From the Show Item Page, I should able to see the socks displayed with the details like Picture, Name, Categories, Material, Size and Price. There should be a Add to Cart Button for each socks | Pass
+8 |	I clicked on the link, MEN, WOMEN and KIDS under the Categories on the right side of the page. It should display on the socks of that category. | Pass
+9 |	I clicked and dragged the minimum price to $20. Socks with price less than $20 will be filter away. Only socks with price more than $20 will be displayed. | Pass
+10 | I clicked and dragged the maximum price to $10. Socks with price more than $10 will be filter away. Only socks with price less than $10 will be displayed.	| Pass
+11 | I clicked on the Add to Cart Button. That sock will be added to my shopping cart. The number on the cart icon in the navigation bar will increase by one. | Pass
+12 | I clicked on the shopping cart icon in the navigation bar. It should direct me to my shopping cart page. | Pass
+- |	**Shopping Cart Page** | -
+13 | From the shopping cart page, I should able to see the items that I added to the shopping cart with the following details. Sock picture, Name, Price, Quantity. | Pass
+13 | The Cart Totals should display the total price of the all the items in the shopping cart | Pass
+14 | I clicked on the Cross button in the Remove Column. The item in that row will be removed from my shopping cart. The Cart total price should subtract that item price. | Pass
+15 | I clicked on the Proceed to Checkout Button. It should direct me to the Checkout Page | Pass
+16 | I clicked on the Continue Shopping Button. It should direct me back to the show item page. | Pass
+- | **Checkout Page** | -
+16 | From the Checkout page, I should be able to see my company name, items in my shopping cart and their individual price as well as the total price. | Pass
+17 | I clicked on the Back to SOXS Store link. It should direct me back to the show item page. | Pass
+18 | Enter the following information: <br> - Any email address in valid format. <br> - Testing credit card number 4242 4242 4242 4242 in the card information. <br> - 03/22 in MM/YY <br> - any 3 numbers in CVC <br> - Any name in Name on Card <br> - Singapore in Country or region <br> I clicked on the Pay Button. I should be to pay successfully. |	Pass
+19 | I clicked on the Back to SOXS Store link. It should direct me back to the show item page. | Pass
+20 | After successful payment, I should be directed to Thank you page and show message that my order is successfully completed. | Pass
+21 | I clicked on the Back to Shop Button which should direct me back to the show cart page to view all the socks. | Pass
+22 | I clicked on the Log In link in the navigation bar. It should direct me to the Log In page	| Pass
+- | **Log In Page**	| -
+23 | From the Login Page, I should be able to Log In the customer account <br> Username: Test <br> Password: zaq1@WSX <br> It should direct me to the show_item page and display all the socks. | Pass
+24 | After I Log in, the Log In link in the navigation bar should change to Log Out. I clicked on the Log Out link which will Log Out my Account and re-direct to Home Page. | Pass
+25 | From the Login Page, I key in a wrong username and password. It should not Log In any account. An error message will be prompt “Your username and password didn't match. Please try again.” | Pass
+27 | From the Login Page, I should be able to Log In using the staff  account below: <br> Username: admin <br> Password: admin123 <br> It should direct me to the show_item page and display all the socks. <br> 3 additional buttons will be displayed. Update Product, Delete Product and Add New Product. These 3 button should not be displayed when normal customer Log in. | Pass
+28 | From the Log in Page, I clicked on the Lost  password link. It should direct to the Django default Password reset page. <br> I enter the registered email address and clicked Reset my password button. <br> Instructions for resetting your password will be send to the email. | Pass
+29 | From the Login Page, I clicked on Sign Up Here link for New User. It should direct me to the Sign Up Page. | Pass
+- | **Sign Up Page** | -
+30 | From the Sign Up Page, I should be able to register a new account by filling out the information <br> Username, First Name, Last Name, Email, Password and Password Confirmation. <br> After I sucessfully sign up an account, it should direct me to the show item page in Log In status.	| Pass
+31 | I tried to sign up using an existing username. Test. An error message will be prompt “A user with that username already exists.” I am unable to sign up a new account with that username. | Pass
+32 | I left out the username and password and clicked on the Sign Up button. An error message will be prompt to fill up the required details. | Pass
+33 | I sign up using a different password for Password and Password Confirmation. An Error message is prompt “The two password fields didn't match.” | Pass
+- | **Add Products Page** | -	
+34 | After I log in using the staff account, <br> Username: admin <br> Password: admin123 <br> I clicked on Add New Product Button which will direct to the Add products Page | Pass
+35 | From the Add Products Page, I am able to add new products by filling in all the details and upload the product image. The new products can be found in the Shop Page | Pass
+- | **Update Products Page** | -
+36 | I clicked on the Update Product button which will direct to Update products page with the item detail displayed in the textbox. | Pass
+37 | I amended the product details and clicked on the Update Products Button. The product details are updated and display in the Shop page | Pass
+- | **Delete Products Page** |-
+38 | I clicked on the Delete Product button which will direct to Delete products page with a confirmation message to ask if I want to delete the product | Pass
+39 | I clicked on the No Button. It will direct to the Shop Page. The product is not deleted | Pass
+40 | I clicked on the Confirm Delete Button. The product is deleted. It cannot be found in the Shop Page. | Pass
 
 ### Responsiveness
 The websites are tested on mobile phone and desktop. In addition, the pages are tested using different viewport under the inspector tool. The site is fully responsive - it's mobile and desktop-friendly.,br><br>
