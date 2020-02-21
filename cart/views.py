@@ -13,7 +13,7 @@ def view_cart(request):
     
     # Calculate and display total price
     for idx,cart_item in cart.items():
-        subtotal = cart_item['price']*cart_item['quantity']
+        subtotal = cart[idx]['price']*cart[idx]['quantity']
         total = total + subtotal
         print (cart_item)
     
@@ -53,6 +53,35 @@ def add_cart(request, products_id):
         return redirect('/products/')
         
         
+# Increase the quantity of the socks in the cart        
+def add_quantity(request, products_id):
+    
+    # get the object specified by the key 'shopping_cart', if not found, return an empty dictionary
+    cart = request.session.get('shopping_cart', {})
+    
+    # Add the products specified by the products_id argument to cart
+    products = get_object_or_404(Products, pk=products_id)
+
+    cart[products_id]['quantity']+=1
+    request.session['shopping-cart'] = cart
+    return redirect('/cart/')
+
+# Decrease the quantity of the socks in the cart 
+def minus_quantity(request, products_id):
+    
+    # get the object specified by the key 'shopping_cart', if not found, return an empty dictionary
+    cart = request.session.get('shopping_cart', {})
+    
+    # Add the products specified by the products_id argument to cart
+    products = get_object_or_404(Products, pk=products_id)
+    
+    # check and prevent the quantity drop less than 1
+    if cart[products_id]['quantity'] > 1:
+        cart[products_id]['quantity']-=1
+    
+    request.session['shopping-cart'] = cart
+    return redirect('/cart/')
+    
         
 def remove_cart(request, products_id):
     cart=request.session.get('shopping_cart', {})

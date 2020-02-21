@@ -25,7 +25,7 @@
                                     <th class="product-name">Product</th>
                                     <th class="product-price">Price</th>
                                     <th class="product-quantity">Quantity</th>
-                                    <th class="product-total">Total</th>
+                                    <th class="product-total">Subtotal</th>
                                     <th class="product-remove">Remove</th>
                                 </tr>
                             </thead>
@@ -48,12 +48,12 @@
                                     <td>
                                         <div class="input-group mb-3" style="max-width: 120px;">
                                             <div class="input-group-prepend">
-                                                <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                                                <button class="btn btn-outline-primary js-btn-minus" onclick="window.location='/cart/minus_quantity/{{products.id}}'" type="button">&minus;</button>
                                             </div>
                                             <input type="text" class="form-control text-center" value="{{products.quantity}}" placeholder="" name="quantity" aria-label="Example text with button addon" aria-describedby="button-addon1">
 
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                                                <button class="btn btn-outline-primary js-btn-plus" onclick="window.location='/cart/add_quantity/{{products.id}}'" type="button">&plus;</button>
                                             </div>
                                         </div>
                                     </td>
@@ -76,11 +76,8 @@
 
                 <div class="col-md-6">
                     <div class="row mb-5">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
-                        </div>
                         <div class="col-md-6">
-                            <button class="btn btn-outline-primary btn-sm btn-block" onclick="window.location='{% url 'show_products' %}'">Continue Shopping</button>
+                            <button class="btn btn-primary btn-sm btn-block" onclick="window.location='{% url 'show_products' %}'">Continue Shopping</button>
                         </div>
                     </div>
                 </div>

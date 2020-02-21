@@ -22,7 +22,7 @@ def checkout(request):
             'name' : products.name,
             'amount': int(products.price * 100),
             'currency' : 'sgd',
-            'quantity' : 1
+            'quantity' : cart[id]['quantity']
         })
       
     session = stripe.checkout.Session.create(
