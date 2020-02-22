@@ -92,6 +92,7 @@
                     <div class="border p-4 mb-4">
                         <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
                         <ul class="list-unstyled mb-0">
+                            <li class="mb-1"><a href='{% url "show_products" %}' class="d-flex"><span>All</span></a></li>
                             <li class="mb-1"><a href='{% url "show_products" category="MEN" %}' class="d-flex"><span>Men</span></a></li>
                             <li class="mb-1"><a href='{% url "show_products" category="WOMEN" %}' class="d-flex"><span>Women</span></a></li>
                             <li class="mb-1"><a href='{% url "show_products" category="KIDS" %}' class="d-flex"><span>Kids</span></a></li>
