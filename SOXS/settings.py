@@ -25,7 +25,7 @@ SECRET_KEY = 'llz+c4k8a46+ulgexf32j7w!zb3d9m+%eapfp)mv5qppkgu7^c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://nyt-soxs-store.herokuapp.com/','*']
 
 
 # Application definition
@@ -150,3 +150,5 @@ UPLOADCARE = {
     'pub_key': UPLOADCARE_PUBLIC_KEY,
     'secret': UPLOADCARE_SECRET_KEY,
 }
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

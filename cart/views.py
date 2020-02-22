@@ -15,7 +15,6 @@ def view_cart(request):
     for idx,cart_item in cart.items():
         cart[idx]['subtotal'] = cart[idx]['price']*cart[idx]['quantity']
         total = total + cart[idx]['subtotal']
-        print (cart_item)
     
     return render(request, 'cart/view_cart.html', {
         'shopping_cart':cart,

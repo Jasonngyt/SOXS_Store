@@ -45,11 +45,11 @@
                                                 <span class="collection d-block">{{p.material}}</span>
                                                 <span class="collection d-block">{{p.size}}</span><br>
                                                 <h4 class="price">${{p.price|floatformat:2}}</h4>
-                                                <p><a href="/cart/add/{{p.id}}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+                                                <p><a href="/cart/add/{{p.id}}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p><br>
 
                                                 {% if user.is_authenticated and user.is_superuser %}
                                                     <p><a href="{% url 'update_products' products_id=p.id %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Update Product</a></p>
-                                                    <p><a href="{% url 'delete_products' products_id=p.id %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Delete Product</a></p>
+                                                    <p><a href="{% url 'delete_products' products_id=p.id %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Delete Product</a></p><br>
                                                 {% endif %}
 
                                             </div>
@@ -67,13 +67,19 @@
                         <div class="col-md-12 text-center">
                             <div class="site-block-27">
                                 <ul>
-                                    <li><a href="#">&lt;</a></li>
-                                    <li class="active"><span>1</span></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">&gt;</a></li>
+                                    {% if all_products.has_previous %}
+                                        <li><a href="?page={{all_products.previous_page_number}}">&lt;</a></li>
+                                    {% else %}
+                                        <li><a href="#">&lt;</a></li>
+                                    {% endif %}
+                                    
+                                    <li class="active"><span>{{all_products.number}}</span></li>
+                                    
+                                    {% if all_products.has_next %}
+                                        <li><a href="?page={{all_products.next_page_number}}">&gt;</a></li>
+                                    {% else %}
+                                        <li><a href="#">&gt;</a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>

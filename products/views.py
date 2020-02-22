@@ -2,16 +2,17 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Products
 from .forms import ProductForm, ProductsSearch
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.core.paginator import Paginator
 
 
 def show_products(request,category=""):
     form  = ProductsSearch()
-    print(category)
     all_products = Products.objects.all()
     
     # declare the min price and max price for the initial price filter bar
     min_price=1
     max_price=99
+
     
     # Display all products
     if request.GET.get('search_terms'):
@@ -30,7 +31,10 @@ def show_products(request,category=""):
         all_products = all_products.filter(price__lte=request.GET.get('max_price'))
         max_price=request.GET.get('max_price')
         
-        
+    paginator = Paginator(all_products, 10) # Show 10 products per page.
+    page_number = request.GET.get('page')
+    all_products = paginator.get_page(page_number)
+    
     return render(request, 'products/show_items.html', {
         'all_products':all_products,
         'search_products':form,
