@@ -13,8 +13,8 @@ def view_cart(request):
     
     # Calculate and display total price
     for idx,cart_item in cart.items():
-        subtotal = cart[idx]['price']*cart[idx]['quantity']
-        total = total + subtotal
+        cart[idx]['subtotal'] = cart[idx]['price']*cart[idx]['quantity']
+        total = total + cart[idx]['subtotal']
         print (cart_item)
     
     return render(request, 'cart/view_cart.html', {
