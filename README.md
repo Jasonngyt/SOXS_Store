@@ -2,6 +2,7 @@
 
 SOXS is an Asia-based specialist retailer of socks. Found in 2010 by Elizabeth Graham and Jennifer Greive, they started their first store in Singapore. Till date, the socks are sold in over 1,000 distribution stores across Asia. <br><br>
 The store is looking to further the sales of the products by creating a online platform for their customers to make purchase. The wesbite is designed to meet the user experience and deployed in Heroku with the link below: <br><br>
+**https://nyt-soxs-store.herokuapp.com/** <br><br>
 
 ## UX Design- User Stories
 ### Customer View
@@ -141,6 +142,8 @@ The websites are tested on mobile phone and desktop. In addition, the pages are 
 <img src="/static/Readme_image/desktop_view.jpg">
 
 #### Website Mobile View
+
+<img src="/static/Readme_image/mobile_view.jpg">
 
 ### Problems Encountered/Bugs solved
 ● I was unable to add in filter by price feature in the first place. After going through the main.js with the Teaching Assitance, John. We managed to do it by adjusting adding and adjusting the min and max price into the javascaript file. <br><br>
