@@ -23,6 +23,8 @@ The store is looking to further the sales of the products by creating a online p
 ### Wire Frame
 The wireframe can be viewed in the link below:
 
+https://drive.google.com/file/d/1_DlU6S5mFeTHaX3YkKQQ7o5mrpo6npsw/view?usp=sharing
+
 
 ## Project Skeleton
 
