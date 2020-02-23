@@ -154,10 +154,10 @@ The websites are tested on mobile phone and desktop. In addition, the pages are 
 
 #### Website Mobile View
 
-<img src="/static/Readme_image/mobile_view.jpg" width="500px">
+<img src="/static/Readme_image/mobile_view.jpg" width="400px">
 
 ### Problems Encountered/Bugs solved
-● I was unable to add in filter by price feature in the first place. After going through the main.js with the Teaching Assitance, John. We managed to do it by adjusting adding and adjusting the min and max price into the javascaript file. <br><br>
+● I was unable to add in filter by price feature in the first place. After going through the main.js with the Teaching Assistant, John. We managed to do it by adjusting adding and adjusting the min and max price into the javascaript file. <br><br>
 
 ## Upload Files to Github
 This project was written using AWS Cloud9 IDE, uploaded to Github for version control. <br>
@@ -257,7 +257,7 @@ You should see two more origins with the word heroku in the URL.
 
 **Step 6** Copy environment variables over
 
-1. Open your ```.bashrc file``` in Cloud9. 
+1. Open your ```.bashrc file``` in Cloud9.
 2. Open a new browser tab, and go to http://www.heroku.com 
 3. Click on your app in the dashboard.
 4. Click on Settings
@@ -278,7 +278,7 @@ web: gunicorn SOXS_Store.wsgi:application
 
 **Step 3** Update ALLOWED_HOSTS inside settings.py
 
-Add the domain name (AND JUST THE DOMAIN NAME ONLY. i.e without the HTTPS) of the  the heroku app into the ALLOWED_HOST inside settings.py (you can check by going to the app inside your Heroku dashboard, then click the [Open App] button on the upper right corner of the screen).
+Add the domain name (AND JUST THE DOMAIN NAME ONLY. i.e without the HTTPS) of the heroku app into the ALLOWED_HOST inside settings.py (you can check by going to the app inside your Heroku dashboard, then click the [Open App] button on the upper right corner of the screen).
 
 **Step 4** Generate requirements.txt
 
@@ -339,8 +339,8 @@ The Styling of the webpage is cutomised from <a href="https://colorlib.com/wp/te
 ### Special Thanks to:
 
 **Code Institute**
-- The Html Fundamentals module, CSS Fundamentals module, Python Fundamentals module,Practical Python module and the Fullstack Frameworks module were used for guidance.
+- The HTML Fundamentals module, CSS Fundamentals module, Python Fundamentals module, Practical Python module and the Fullstack Frameworks module were used for guidance.
 
 **Our Lecturer, Mr Paul Chor and Teaching Assistant, John**
 
-- For all  the Guidance and Help during lesson and tackling project issue.
+- For all the Guidance and Help during lesson and tackling project issue.
