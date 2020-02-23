@@ -154,7 +154,7 @@ The websites are tested on mobile phone and desktop. In addition, the pages are 
 
 #### Website Mobile View
 
-<img src="/static/Readme_image/mobile_view.jpg" width="300px">
+<img src="/static/Readme_image/mobile_view.jpg" width="500px">
 
 ### Problems Encountered/Bugs solved
 ● I was unable to add in filter by price feature in the first place. After going through the main.js with the Teaching Assitance, John. We managed to do it by adjusting adding and adjusting the min and max price into the javascaript file. <br><br>
