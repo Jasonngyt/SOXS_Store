@@ -30,39 +30,39 @@ The wireframe can be viewed in the link below:
 
 Page | Description
 --- | ---
-Top Navigation Bar | The navigation bar has the following items: <br><br> 1. **Company Logo** - *direct to the index page when customer click on it.* <br> 2. **About** - *direct to the About Us page.* <br>  3. **Category** - *Display 3 links, MEN, WOMEN and KIDS, when hover over. Customer can go to individual category when they click on the link.* <br> 4. **Shop** - *direct to the Show_Item page which displays all the socks for the customer to choose.* <br> 5. **Login** - *direct to the login page for users to log into their account. The Log in will change to Log out after the user login. User will log out their account when they click on the Log Out link.* <br> 6. **Search Icon** - *Search Textbox will be displayed when customer clicks on the icon. Customer can input the product name and press the Enter key to conduct the search.* <br> 7. **Cart Icon** -  *this icon will display the number of items that the customer added to the cart. Customer are direct to the View_Cart page to see their cart items.* <br><br>
-Footer Bar | The footer bar has the following items:<br><br> 1. **About Us** - *A short Introduction on the Organisation and link to direct the customer to the About Us page with full details of the organisation.* <br> 2. **FAQ** - *direct to the FAQ page* <br> 3. **Privacy Policy** - *direct to the Privacy_Policy page* <br> 4. **Return & Refund** - *direct to Return_n_Refund page* <br> 5. **Terms & Condition** - *direct to Term_n_Condition page* <br> 6. **Company Contact Information** *such as Email, Contact Number and Address are shown here.* <br><br>
-Index | This is the landing page. The **Shop Now** button in the middle of the page will direct the customer go to the show_item page to start their online shopping.  <br><br> There are also 3 links below, MEN, WOMEN and KIDS which allow the customer to go directly to the category of products without going through the entire product list. <br><br>
-About |	This is the About Us page that introduce the Company to the customer. Full description such as Company History and Team members of the organisation are display here. <br><br>
-FAQ	| This page display some of the frequent questions asked by the customer. This is display in the bootstrap feature and collapse feature. The answers will be displayed in the expanded views when customer click on the questions in the collapse view. <br><br>
-Privacy_Policy | This page displays the Privacy Policy of the Company. <br><br>
-Return_n_Refund	| This page displays the Return and Refund Policy of the Company. <br><br> 
-Terms_n_Conditions | This page displays the Terms and Conditions of the Company. <br><br>
-Show_Item | This page displays all the socks in the store. <br><br> Customers can filter the list of the socks by adjusting the price bar on the right side of the page. Only socks that fit in between price range set by the customer will be display. <br><br> In addition, customer can view the list by their category, MEN, WOMEN or KIDS. <br><br>
-Create_Item	| This page let the staff of the store to add new products. Details like Product Name, Product Image, Color, Material, Size and Price are mandatory to fill in before the staff can add the item. <br><br>
-Update_Item	| This page allows the staff of the store to amend or update the products details. <br><br>
-Delete_Item	| This page alllows the staff to delete the products from the product list. <br><br>
-View_Cart |	This page displays all the products that the customer added to the shopping cart. The product image, name and price will be display for individual item. Customer can change the quantity of the purchase. The sub total and grand total price will change accordingly to tell the user how much they need to pay for the purchase. <br><br> Customer can continue shopping for more products by clicking on the continue shopping button. <br><br> Once the customers are satisfy with their purchase, they will click on the checkout button to make payment. <br><br>
-Checkout | This page is the payment page using Stripe Online Payment Platform. Customer will see the items and the amount that they will be paying. They will be able to pay through their credit card. <br><br>
-Thankyou | After succesful payment, the customer will be directed to this Thank you page. <br><br>
-Login |	This page allows the customer to log into their account using their username and password. There is a link for the new user to go to the Sign Up page to register their new account.There is also another link to the Password reset Page for User to reset their password. <br><br> The staff with administration account can log in using this log in page. After they log in , they will be able update and delete the product items. Normal user will not able to amend or the delete the products. <br><br>
-Logout | After the user log in, the Log In link in the navigation bar will change to Log Out link. User can click on this link to log our their account. <br><br>
-Sign Up | This page will allow customer without any account to sign up for one. They will receive news on the store latest Products and Promotion. <br><br> The store can build up their customer base using all the emails collected to promote their products. <br><br>
+Top Navigation Bar | The navigation bar has the following items: <br><br> 1. **Company Logo** - *direct to the homepage when customer click on it.* <br> 2. **About** - *direct to the About Us page.* <br>  3. **Category** - *Display 3 links, MEN, WOMEN and KIDS, when hover over. Customer can go to individual category when they click on the link.* <br> 4. **Shop** - *direct to the Shop page which displays all the socks for customer to choose.* <br> 5. **Login** - *direct to the Login page for both customer and staff to login their account. The Log in link will change to Log out link after the user login. User will log out their account when they click on the Log Out link.* <br> 6. **Search Icon** - *Search Textbox will be displayed when customer clicks on the magnifier icon. Customer can input the product name and press Enter key to conduct the search.* <br> 7. **Cart Icon** -  *this icon will display the number of items that the customer added to the cart. Customer are direct to the Shopping Cart page to see their cart items.* <br><br>
+Footer Bar | The footer bar has the following items:<br><br> 1. **About Us** - *A short Introduction on the Company and link to direct the customer to About Us page with full details of the company.* <br> 2. **FAQ** - *direct to the Frequently Asked Question page* <br> 3. **Privacy Policy** - *direct to the Privacy_Policy page* <br> 4. **Return & Refund** - *direct to Return and Refund page* <br> 5. **Terms & Condition** - *direct to Term and Condition page* <br> 6. **Company Contact Information** *such as Email, Contact Number and Address are shown here.* <br><br>
+Homepage | This is the homepage. There is a **Shop Now** button in the middle of the page will direct the customer go to the Shop page to start their online shopping.  <br><br> There are also 3 images below, MEN, WOMEN and KIDS which allow the customer to click and go directly to the category of products without going through the entire product list. <br><br>
+About |	This is the About Us page that gives the introduction the company. Details such as history and team members of the company can be found here. <br><br>
+FAQ	| This page display the answers to the frequently questions. It is displayed in Bootstrap expand and collapse box. The answers will be displayed in the expanded views when customer click on the questions in the collapse view. <br><br>
+Privacy Policy | This page displays the Privacy Policy of the Company. <br><br>
+Return and Refund	| This page displays the Return and Refund Policy of the Company. <br><br> 
+Terms and Conditions | This page displays the Terms and Conditions of the Company. <br><br>
+Shop Page | This page displays all the socks of the store. <br><br> Customers can filter the list of the socks by adjusting the price bar on the right side of the page. Only socks that fit in between price range will be displayed. <br><br> In addition, customer can view the list by their category, MEN, WOMEN or KIDS. <br><br>
+Add Products | This page let the store staff to add new products. Staff needs to fill in details like Product Name, Product Image, Material, Size, Category and Price to add the item. <br><br>
+Update Products	| This page allows the store staff to amend or update the products details. <br><br>
+Delete Porducts	| This page alllows the store staff to delete the products. <br><br>
+Cart |	This page displays all the products that the customer added to shopping cart. The product image, name, price and quantity will be display for individual item. Customer can change the quantity of individual items. The subtotal and grand total price will change accordingly to tell the customer how much they need to pay for the purchase. <br><br> Customer can continue shopping for more products by clicking on the continue shopping button. <br><br> Once the customers are satisfy with their purchase, they will click on the checkout button to make payment. <br><br>
+Checkout | This page is the payment page using Stripe Online Payment Platform. Customer will see the items and the amount that they will be paying. They will be able to make secure payment through their credit card. <br><br>
+Thankyou | After payment, the customer will be directed to this Thank you page to inform them that the transaction is succesful. <br><br>
+Login |	This page allows the customer and staff to log into their account using their username and password. There is a link for the new user to go to Sign Up page to register their new account.There is also another link to the Password Reset Page for User to reset their password. <br><br> After the store staff login , they will be able to update and delete the product items. Customer will not able to amend or the delete the products. <br><br>
+Logout | After the user login, the Login link in the navigation bar will change to Logout link. User can click on this link to log our their account. <br><br>
+Sign Up | This page will allow customer without any account to sign up for one. They will receive latest news on the store Products and Promotion. <br><br> The store can build up their customer base using all the emails collected to promote their products. <br><br>
 Password Reset | This page is Django default password reset page. User will be ale to reset their password when they enter their email address. <br><br>
-Base | This is the template HTML containing the Navigation and the Footer page. All the rest of the pages inherient their Naviagtion and Footer from this Base HTML. <br><br>
+Base | This is the template HTML containing the Navigation and Footer page. All the rest of the pages inherent their Naviagtion and Footer from this Base HTML. <br><br>
 
 ### Features to implement in the future
-1. I will like to add in the stock element so that staff do not need to keep track of the products stocks level. The staff will be prompt to replenish the stocks if there is no more stocks available.
+1. I will like to add in the stock element so that staff do not need to keep track of the products stock level. The staff will be prompt to replenish the stock if there is no more socks available.
 2. I will like to add in virtual assistant to assist the customer on any queries and issue that they faced.
-3. I will like to generate feature to generate self generate invoice for the customer.
+3. I will like to add in feature to self generate invoice for the customer.
 
 ## Project Surface
-The theme that I wished to present is simple and user-friendly website as per the user requirement
+The theme that I wished to present is simple and user-friendly website as per the user requirement.
 
 ### Colours
 ● **White and Blue** are main colors chosen for the website. <br>
 ● **White** - The White background is choosen so that the colourful socks image will stand out. <br>
-● **Blue** - Blue Color is choosen to make the customer feel comfortable and at peace. Blue also subtle messages of trustworthiness and serenity, loyalty and tranquill. <br><br>
+● **Blue** - Blue Color is choosen to make the customer feel comfortable and at peace. Blue also subtle messages of peaceful, tranquil and trustworthiness. <br><br>
 
 ### Technologies Used
 ● <a href = "https://aws.amazon.com/cloud9/"> **Cloud9** </a> - The project was developed using Cloud9 Integrated Development Environment. <br>
@@ -81,58 +81,69 @@ The theme that I wished to present is simple and user-friendly website as per th
 ## Testing
 ### Manual Testing
 
+Staff Account
+```
+Username: admin
+Password: admin123
+```
+Customer Account
+
+```
+Username: customer
+Password: zaq1@WSX
+```
+
 | Test Case(s) | Test Description | Result |
 | --- | --- | --- |
 | --- | **Home Page** | --- |
-| 1 | I clicked on the Update Product button which will direct to Update products page with the item detail displayed in the textbox. | Pass |
-| 2 | I could click on individual link which will bring me to the respective page. <br> ● **About** in Navigation Bar- direct to **About Us Page** <br> ● **FAQ** in Footer- direct to **FAQ Page** <br> ● **Return & Refund** in Footer - direct to **Return & Refund Page** <br> ● **Terms and Condition** in Footer - direct to **Terms and Conditions page** | Pass |
-| 3 | I clicked on the Shop Now Button which will bring me to the show_item.html that displays all the socks | Pass |
-| 4 | I clicked on the picture with MEN, WOMEN and KIDS. It should display on the socks of that category. I should get the same result when I clicked on MEN, WOMEN and KIDS under the Catelog in the Navigation Bar.	| Pass |
-| 5 | I clicked on the magnifying glass in the navigation bar, a textbox should display with prompt message “Search products and hit enter”. <br> I should be able to key in the product name and press enter to conduct the search. It should bring me to show_item page which shows only socks name that match the search keyword. | Pass |
-| 6 |	I clicked on the company email address in the footer. It should open up a new email message with response to the company email address. | Pass |
-| --- |	**Show Item Page** | --- |
-| 7 |	From the Show Item Page, I should able to see the socks displayed with the details like Picture, Name, Categories, Material, Size and Price. There should be a Add to Cart Button for each socks | Pass |
-| 8 |	I clicked on the link, MEN, WOMEN and KIDS under the Categories on the right side of the page. It should display on the socks of that category. | Pass |
-| 9 |	I clicked and dragged the minimum price to $20. Socks with price less than $20 will be filter away. Only socks with price more than $20 will be displayed. | Pass |
-| 10 | I clicked and dragged the maximum price to $10. Socks with price more than $10 will be filter away. Only socks with price less than $10 will be displayed.	| Pass |
-| 11 | I clicked on the Add to Cart Button. That sock will be added to my shopping cart. The number on the cart icon in the navigation bar will increase by one. | Pass |
-| 12 | I clicked on the shopping cart icon in the navigation bar. It should direct me to my shopping cart page. | Pass |
+| 1 | I clicked on individual link which will bring me to the respective page. <br> ● **About** in Navigation Bar- direct to **About Us Page** <br> ● **FAQ** in Footer- direct to **FAQ Page** <br> ● **Return & Refund** in Footer - direct to **Return & Refund Page** <br> ● **Terms and Condition** in Footer - direct to **Terms and Conditions page.** <br><br> | Pass |
+| 3 | I clicked on the Shop Now Button which will bring me to the Shop Page that displays all the socks <br><br>| Pass |
+| 4 | I clicked on the 3 pictures with wording, MEN, WOMEN and KIDS. It should display the socks of that category in the Shop Page. <br><br> I should get the same result when I clicked on MEN, WOMEN and KIDS under the Catelog in the Navigation Bar. <br><br> | Pass |
+| 5 | I clicked on the magnifying glass in the navigation bar, a textbox should display with prompt message “Search products and hit enter”. <br><br> I should be able to key in the product name and press enter to conduct the search. It should show the socks name what match the search keyword in the Shop Page. <br><br>| Pass |
+| 6 | I clicked on the company email address in the footer. It should open up a new email message with response to the company email address. <br><br> | Pass |
+| --- |	**Shop Page** | --- |
+| 7 | From the Shop Page, I should able to see the socks displayed with details like Picture, Name, Categories, Material, Size and Price. There should be a Add to Cart Button for each socks. <br><br> | Pass |
+| 8 | I clicked on the next page arrow, it should show me the next page of socks. <br><br> I clicked on the previous page arrow, it should bring me to the previous page of socks. <br><br> | Pass |
+| 9 | I clicked on the link, MEN, WOMEN and KIDS under the Categories on right side of the page. It should display the socks of that category. I clicked on the All link, it should display all the socks. <br><br>|  Pass |
+| 10 | I clicked and dragged the minimum price to $20. Socks with price less than $20 will be filter away. Only socks with price more than $20 will be shown. I dragged the minimum price back to $1, all the socks will be shown. <br><br> | Pass |
+| 11 | I clicked and dragged the maximum price to $30. Socks with price more than $30 will be filter away. Only socks with price less than $30 will be displayed. <br><br>	| Pass |
+| 12 | I clicked on Add to Cart Button. That sock will be added to my shopping cart. The number on the cart icon in the navigation bar will increase by one. <br><br>| Pass |
+| 13 | I clicked on the shopping cart icon in the navigation bar. It should direct me to my shopping cart page. <br><br> | Pass |
 | --- |	**Shopping Cart Page** | --- |
-| 13 | From the shopping cart page, I should able to see the items that I added to the shopping cart with the following details. Sock picture, Name, Price, Quantity. | Pass |
-| 14 | The Cart Totals should display the total price of the all the items in the shopping cart | Pass |
-| 15 | I clicked on the Cross button in the Remove Column. The item in that row will be removed from my shopping cart. The Cart total price should subtract that item price. | Pass |
-| 16 | I clicked on the Proceed to Checkout Button. It should direct me to the Checkout Page | Pass |
-| 17 | I clicked on the Continue Shopping Button. It should direct me back to the show item page. | Pass |
+| 14 | From the shopping cart page, I should able to see the items that were added to shopping cart with the following details. Picture of Sock, Name, Price and Quantity. <br><br> | Pass |
+| 15 | I clicked on the Up arrow to increase the quantity. The quantity should increase. The sutotal and grand total price should change accordingly. <br><br> The quantity should decrease when I clicked on the Down button. The quantity should not decrease to 0 or less. <br><br> | Pass |
+| 16 | I clicked on the Cross button in the Remove Column. The item in that row will be removed from my shopping cart. The grand total price should subtract that item price. <br><br> | Pass |
+| 17 | I clicked on the Proceed to Checkout Button. It should direct me to the Checkout Page <br><br> | Pass |
+| 18 | I clicked on the Continue Shopping Button. It should direct me back to the Shop page. <br><br> | Pass |
 | --- | **Checkout Page** | --- |
-| 18 | From the Checkout page, I should be able to see my company name, items in my shopping cart and their individual price as well as the total price. | Pass |
-| 19 | I clicked on the Back to SOXS Store link. It should direct me back to the show item page. | Pass |
-| 20 | Enter the following information: <br> - Any email address in valid format. <br> - Testing credit card number 4242 4242 4242 4242 in the card information. <br> - 03/22 in MM/YY <br> - any 3 numbers in CVC <br> - Any name in Name on Card <br> - Singapore in Country or region <br> I clicked on the Pay Button. I should be to pay successfully. | Pass |
-| 21 | I clicked on the Back to SOXS Store link. It should direct me back to the show item page. | Pass |
-| 22 | After successful payment, I should be directed to Thank you page and show message that my order is successfully completed. | Pass |
-| 23 | I clicked on the Back to Shop Button which should direct me back to the show cart page to view all the socks. | Pass |
-| 24 | I clicked on the Log In link in the navigation bar. It should direct me to the Log In page	| Pass |
+| 19 | From the Checkout page, I should be able to see the company name, name of items, quantity, individual, subtotal and grand total price. <br><br> | Pass |
+| 20 | I clicked on the Back to SOXS Store link. It should direct me back to the Products page. | Pass |
+| 21 | I enter the following information in the payment column: <br> - Any email address in valid format. <br> - Testing credit card number ```4242 4242 4242 4242``` in the card information. <br> - ```03/29``` in MM/YY <br> - any 3 numbers in CVC <br> - Any name in Name on Card <br> - Singapore in Country or region <br> I clicked on the Pay Button. The payment should be successful. | Pass |
+| 22 | After successful payment, I should be directed to Thank you page and show message that my order is successfully completed. <br><br> | Pass |
+| 23| I clicked on the Back to Shop Button which should direct me back to the Shop page. <br><br> | Pass |
 | --- | **Log In Page**	| --- |
-| 25 | From the Login Page, I should be able to Log In the customer account <br> Username: Test <br> Password: zaq1@WSX <br> It should direct me to the show_item page and display all the socks. | Pass |
-| 26 | After I Log in, the Log In link in the navigation bar should change to Log Out. I clicked on the Log Out link which will Log Out my Account and re-direct to Home Page. | Pass |
-| 27 | From the Login Page, I key in a wrong username and password. It should not Log In any account. An error message will be prompt “Your username and password didn't match. Please try again.” | Pass |
-| 28 | From the Login Page, I should be able to Log In using the staff  account below: <br> Username: admin <br> Password: admin123 <br> It should direct me to the show_item page and display all the socks. <br> 3 additional buttons will be displayed. Update Product, Delete Product and Add New Product. These 3 button should not be displayed when normal customer Log in. | Pass |
-| 29 | From the Log in Page, I clicked on the Lost  password link. It should direct to the Django default Password reset page. <br> I enter the registered email address and clicked Reset my password button. <br> Instructions for resetting your password will be send to the email. | Pass |
-| 30 | From the Login Page, I clicked on Sign Up Here link for New User. It should direct me to the Sign Up Page. | Pass |
+| 24 | I clicked on the Log In link in the navigation bar. It should direct me to Login page. <br><br> | Pass |
+| 25 | From the Login Page, I should be able to Log In with the customer account <br> Username: customer <br> Password: zaq1@WSX <br> It should direct me to the Shop page. <br><br> | Pass |
+| 26 | After I Log in, the Log In link in the navigation bar should change to Log Out. I clicked on the Log Out link which will logout my account and re-direct to Home Page. <br><br> | Pass |
+| 27 | From the Login Page, I key in a wrong username and password. It should not login any account. An error message will be prompt “Your username and password didn't match. Please try again.” <br><br> | Pass |
+| 28 | From the Login Page, I should be able to login using the staff account. <br> ```Username: admin <br> Password: admin123``` <br> It should direct me to the Shop page. <br> 3 additional buttons will be displayed. Update Product, Delete Product and Add New Product. These 3 buttons should not be displayed when customer login. <br><br> | Pass |
+| 29 | From the Log in Page, I clicked on the lost password link. It should direct to the Django default Password reset page. <br> I enter the registered email address and clicked Reset my password button. <br> Instructions for resetting your password will be send to the email. <br><br> | Pass |
+| 30 | From the Login Page, I clicked on Sign Up Here link for New User. It should direct me to the Sign Up Page. <br><br> | Pass |
 | --- | **Sign Up Page** | --- |
-| 31 | From the Sign Up Page, I should be able to register a new account by filling out the information <br> Username, First Name, Last Name, Email, Password and Password Confirmation. <br> After I sucessfully sign up an account, it should direct me to the show item page in Log In status.	| Pass |
-| 32 | I tried to sign up using an existing username. Test. An error message will be prompt “A user with that username already exists.” I am unable to sign up a new account with that username. | Pass |
-| 33 | I left out the username and password and clicked on the Sign Up button. An error message will be prompt to fill up the required details. | Pass |
-| 34 | I sign up using a different password for Password and Password Confirmation. An Error message is prompt “The two password fields didn't match.” | Pass |
+| 31 | From the Sign Up Page, I should be able to register a new account by filling out the information <br> Username, First Name, Last Name, Email, Password and Password Confirmation. <br> After I sucessfully sign up an account, it should direct me to Shop page in login status.	<br><br> | Pass |
+| 32 | I tried to sign up using an existing username, ```customer``` An error message will be prompt “A user with that username already exists.” I was unable to sign up a new account with that username. <br><br> | Pass |
+| 34 | I left out the username and password and clicked on Sign Up button. An error message will be prompt to fill up the required details. <br><br> | Pass |
+| 35 | I sign up using a different password for Password and Password Confirmation. An Error message will be prompt “The two password fields didn't match.” <br><br> | Pass |
 | --- | **Add Products Page** | --- |	
-| 35 | After I log in using the staff account, <br> Username: admin <br> Password: admin123 <br> I clicked on Add New Product Button which will direct to the Add products Page | Pass |
-| 36 | From the Add Products Page, I am able to add new products by filling in all the details and upload the product image. The new products can be found in the Shop Page | Pass |
+| 36 | After I log in using the staff account, <br> ```Username: admin <br> Password: admin123``` <br> I clicked on Add New Product Button which will direct to the Add Product Page <br><br> | Pass |
+| 37 | From the Add Products Page, I could add in new socks by filling in all the details and upload the socks image. The new item can be found in the Shop Page <br><br> | Pass |
 | --- | **Update Products Page** | --- |
-| 37 | I clicked on the Update Product button which will direct to Update products page with the item detail displayed in the textbox. | Pass |
-| 38 | I amended the product details and clicked on the Update Products Button. The product details are updated and display in the Shop page | Pass |
+| 38 | I clicked on the Update Product button which will direct to Update Product page with the item detail displayed in the textbox. <br><br> | Pass |
+| 39 | I changed the socks details and clicked on the Update Product Button. The details are updated and display in the Shop page <br><br> | Pass |
 | --- | **Delete Products Page** | --- |
-| 39 | I clicked on the Delete Product button which will direct to Delete products page with a confirmation message to ask if I want to delete the product | Pass |
-| 40 | I clicked on the No Button. It will direct to the Shop Page. The product is not deleted | Pass |
-| 41 | I clicked on the Confirm Delete Button. The product is deleted. It cannot be found in the Shop Page. | Pass
+| 40 | I clicked on Delete Product button which will direct to Delete Product page with a confirmation message to ask if I want to delete the product. <br><br> | Pass |
+| 41 | I clicked on the No Button. It will direct to the Shop Page. The product is not deleted <br><br> | Pass |
+| 42 | I clicked on the Confirm Delete Button. The product is deleted. It cannot be found in the Shop Page. | Pass
 
 ### Responsiveness
 The websites are tested on mobile phone and desktop. In addition, the pages are tested using different viewport under the inspector tool. The site is fully responsive - it's mobile and desktop-friendly.,br><br>
