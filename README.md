@@ -125,10 +125,10 @@ Password: zaq1@WSX
 | 23| I clicked on the Back to Shop Button which should direct me back to the Shop page. <br><br> | Pass |
 | --- | **Log In Page**	| --- |
 | 24 | I clicked on the Log In link in the navigation bar. It should direct me to Login page. <br><br> | Pass |
-| 25 | From the Login Page, I should be able to Log In with the customer account <br> Username: customer <br> Password: zaq1@WSX <br> It should direct me to the Shop page. <br><br> | Pass |
+| 25 | From the Login Page, I should be able to Log In with the customer account <br> ```Username: customer``` <br> ```Password: zaq1@WSX``` <br> It should direct me to the Shop page. <br><br> | Pass |
 | 26 | After I Log in, the Log In link in the navigation bar should change to Log Out. I clicked on the Log Out link which will logout my account and re-direct to Home Page. <br><br> | Pass |
 | 27 | From the Login Page, I key in a wrong username and password. It should not login any account. An error message will be prompt “Your username and password didn't match. Please try again.” <br><br> | Pass |
-| 28 | From the Login Page, I should be able to login using the staff account. <br> ```Username: admin <br> Password: admin123``` <br> It should direct me to the Shop page. <br> 3 additional buttons will be displayed. Update Product, Delete Product and Add New Product. These 3 buttons should not be displayed when customer login. <br><br> | Pass |
+| 28 | From the Login Page, I should be able to login using the staff account. <br> ```Username: admin``` <br> ```Password: admin123``` <br> It should direct me to the Shop page. <br> 3 additional buttons will be displayed. Update Product, Delete Product and Add New Product. These 3 buttons should not be displayed when customer login. <br><br> | Pass |
 | 29 | From the Log in Page, I clicked on the lost password link. It should direct to the Django default Password reset page. <br> I enter the registered email address and clicked Reset my password button. <br> Instructions for resetting your password will be send to the email. <br><br> | Pass |
 | 30 | From the Login Page, I clicked on Sign Up Here link for New User. It should direct me to the Sign Up Page. <br><br> | Pass |
 | --- | **Sign Up Page** | --- |
@@ -137,7 +137,7 @@ Password: zaq1@WSX
 | 34 | I left out the username and password and clicked on Sign Up button. An error message will be prompt to fill up the required details. <br><br> | Pass |
 | 35 | I sign up using a different password for Password and Password Confirmation. An Error message will be prompt “The two password fields didn't match.” <br><br> | Pass |
 | --- | **Add Products Page** | --- |	
-| 36 | After I log in using the staff account, <br> ```Username: admin <br> Password: admin123``` <br> I clicked on Add New Product Button which will direct to the Add Product Page <br><br> | Pass |
+| 36 | After I log in using the staff account, <br> ```Username: admin``` <br> ```Password: admin123``` <br> I clicked on Add New Product Button which will direct to the Add Product Page <br><br> | Pass |
 | 37 | From the Add Products Page, I could add in new socks by filling in all the details and upload the socks image. The new item can be found in the Shop Page <br><br> | Pass |
 | --- | **Update Products Page** | --- |
 | 38 | I clicked on the Update Product button which will direct to Update Product page with the item detail displayed in the textbox. <br><br> | Pass |
