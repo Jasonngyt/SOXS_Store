@@ -16,7 +16,8 @@ def show_products(request,category=""):
     
     # Display all products
     if request.GET.get('search_terms'):
-        all_products = all_products.filter(name__contains=request.GET.get('search_terms'))
+        product1=request.GET.get('search_terms')
+        all_products = all_products.filter(name__contains=product1.capitalize())
     
     if category != "":
         all_products = all_products.filter(category__category__exact=category)    
