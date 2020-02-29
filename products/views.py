@@ -32,7 +32,7 @@ def show_products(request,category=""):
         all_products = all_products.filter(price__lte=request.GET.get('max_price'))
         max_price=request.GET.get('max_price')
         
-    paginator = Paginator(all_products, 6) # Show 10 products per page.
+    paginator = Paginator(all_products, 8) # Show 8 products per page.
     page_number = request.GET.get('page')
     all_products = paginator.get_page(page_number)
     

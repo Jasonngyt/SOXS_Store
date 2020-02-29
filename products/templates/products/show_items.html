@@ -26,14 +26,24 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                    
+                    <div>
+                        {% if messages %}
+                          <div class="text-dark mb-2">
+                              {% for message in messages %} {{ message }} {% endfor %}
+                          </div>
+                        {% endif %}
+                    </div>
+                     
+                     
                     <div class="row mb-5">
                         <div class="products-wrap border-top-0">
                             <div class="container-fluid">
                                 <div class="row no-gutters products">
 
                                     {% for p in all_products %}
-                                        <div class="col-6 col-md-6 col-lg-6 border-top">
+                                        <div class="col-12 col-md-3 col-lg-3 border-top">
 
                                             {%if p.image %}
                                                 <img src="{{p.image.cdn_url}}" alt="Image" class="img-fluid"> 

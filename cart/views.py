@@ -44,7 +44,7 @@ def add_cart(request, products_id):
         # save the cart back to the session under the key 'shopping_cart'
         request.session['shopping_cart'] = cart
         
-        messages.success(request, 'Product successfully added to your cart!')
+        messages.success(request, 'Socks added to your cart!')
         return redirect('/products/')
     else:
         cart[products_id]['quantity']+=1
@@ -89,7 +89,6 @@ def remove_cart(request, products_id):
     if products_id in cart:
         del cart[products_id]
         request.session['shopping_cart'] = cart
-        messages.success(request, "Product successfully removed from cart!")
     
     return redirect('/cart/')
         
