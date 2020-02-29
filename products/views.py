@@ -3,6 +3,7 @@ from .models import Products
 from .forms import ProductForm, ProductsSearch
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.paginator import Paginator
+from django.contrib import messages
 
 
 def show_products(request,category=""):
@@ -50,10 +51,11 @@ def create_products(request):
         create_products_form = ProductForm(request.POST)
         if create_products_form.is_valid():
             create_products_form.save()
+            messages.success(request, 'New Socks added to Inventory!')
             return redirect(reverse(show_products))
     else:
         create_products_form = ProductForm()
-            
+    
     return render(request, 'products/create_item.html', {
         'form':create_products_form
     })
@@ -67,7 +69,7 @@ def update_products(request, products_id):
         update_products_form = ProductForm(request.POST, instance=products_being_updated)
         if update_products_form.is_valid():
             update_products_form.save()
-         
+            messages.success(request, 'Socks detail updated!')
             return redirect(reverse(show_products))
     else:
         update_products_form = ProductForm(instance=products_being_updated)
@@ -89,4 +91,5 @@ def delete_products(request, products_id):
 def confirm_delete_products(request, products_id):
     products_being_deleted = get_object_or_404(Products, pk=products_id)
     products_being_deleted.delete()
+    messages.success(request, 'Socks deleted from Inventory!')
     return redirect(reverse('show_products'))
