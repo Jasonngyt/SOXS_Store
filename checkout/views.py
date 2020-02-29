@@ -15,6 +15,7 @@ def checkout(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
     
     cart = request.session.get('shopping_cart', {})
+    request.session['shopping_cart'] = {}
  
     line_items = []
     for id, products in cart.items():
