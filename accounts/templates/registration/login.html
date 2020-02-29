@@ -34,9 +34,14 @@
 
         <div class="container pt-3 pb-3 d-flex justify-content-center">
 
+            
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
-
+                
+                 <div>
+                    <h4 class="text-center">Log in now to start your puchase!</h4><br>
+                </div>
+                
                 <table>
                     <tr>
                         <td>{{ form.username.label_tag }}</td>

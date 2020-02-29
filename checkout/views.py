@@ -1,5 +1,5 @@
 from django.shortcuts import render, reverse, HttpResponse, get_object_or_404
-
+from django.contrib.auth.decorators import login_required
 from django.conf import settings
 import stripe
 
@@ -10,6 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 endpoint_secret = 'whsec_ySyA8VU4jKYPv6M4WJG7xJCOUFoZPkj6'
 
 
+@login_required
 def checkout(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
     
@@ -38,12 +39,13 @@ def checkout(request):
     })
 
 
+@login_required
 def checkout_success(request):
     request.session['shopping_cart'] = {}
     return render(request, 'checkout/thankyou.html')
 
 
-
+@login_required
 def checkout_cancelled(request):
     all_products = Products.objects.all()
     min_price=1
@@ -55,7 +57,8 @@ def checkout_cancelled(request):
         'max_price':max_price
     })
   
-   
+  
+@login_required   
 @csrf_exempt
 def payment_completed(request):
     payload = request.body

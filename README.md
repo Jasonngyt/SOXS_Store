@@ -16,7 +16,8 @@ The store is looking to further the sales of the products by creating online pla
 ### Company Goals
 1) “The company wants to build up the product branding by setting up online platform.”
 2) “The company wants to improve the product sales by allowing customers to make online purchase.”
-3) “The company wants to collect contact details of customer so that the company can inform them of any new products or promotion.”
+3) "The company requires the customer to log in their account before they make their payment."
+4) “The company wants to collect contact details of customer so that the company can inform them of any new products or promotion.”
 
 ## Project Structure
 
@@ -47,7 +48,7 @@ Delete Products	| This page allows the store staff to delete the products. <br><
 Cart |	This page displays all the products that the customer added to shopping cart. The product image, name, price and quantity will be display for individual item. Customer can change the quantity of individual items. The subtotal and grand total price will change accordingly to tell the customer how much they need to pay for the purchase. <br><br> Customer can continue shopping for more products by clicking on the continue shopping button. <br><br> Once the customers are satisfy with their purchase, they will click on the checkout button to make payment. <br><br>
 Checkout | This page is the payment page using Stripe Online Payment Platform. Customer will see the items and the amount that they will be paying. They will be able to make secure payment through their credit card. <br><br>
 Thankyou | After payment, the customer will be directed to this Thank you page to inform them that the transaction is successful. <br><br>
-Login |	This page allows the customer and staff to log into their account using their username and password. There is a link for the new user to go to Sign Up page to register their new account. There is also another link to the Password Reset Page for User to reset their password. <br><br> After the store staff login, they will be able to update and delete the product items. Customer will not able to amend or the delete the products. <br><br>
+Login |	This page allows the customer and staff to log into their account using their username and password. Customer is requred to log in in order to checkout and make payment. There is a link for the new user to go to Sign Up page to register their new account. There is also another link to the Password Reset Page for User to reset their password. <br><br> After the store staff login, they will be able to update and delete the product items. Customer will not able to amend or the delete the products. <br><br>
 Logout | After the user login, the Login link in the navigation bar will change to Logout link. User can click on this link to log out their account. <br><br>
 Sign Up | This page will allow customer without any account to sign up for one. They will receive latest news on the store Products and Promotion. <br><br> The store can build up their customer base using all the emails collected to promote their products. <br><br>
 Password Reset | This page is Django default password reset page. User will be able to reset their password when they enter their email address. <br><br>
@@ -115,7 +116,7 @@ Password: zaq1@WSX
 | 14 | From the shopping cart page, I should able to see the items that were added to shopping cart with the following details. Picture of Sock, Name, Price and Quantity. <br><br> | Pass |
 | 15 | I clicked on the Up arrow to increase the quantity. The quantity should increase. The subtotal and grand total price should change accordingly. <br><br> The quantity should decrease when I clicked on the Down button. The quantity should not decrease to 0 or less. <br><br> | Pass |
 | 16 | I clicked on the Cross button in the Remove Column. The item in that row will be removed from my shopping cart. The grand total price should subtract that item price. <br><br> | Pass |
-| 17 | I clicked on the Proceed to Checkout Button. It should direct me to the Checkout Page <br><br> | Pass |
+| 17 | I clicked on the Proceed to Checkout Button. It should direct me to the Checkout Page if user is logged in. It should direct to Log In Page if user is not logged in.<br><br> | Pass |
 | 18 | I clicked on the Continue Shopping Button. It should direct me back to the Shop page. <br><br> | Pass |
 | --- | **Checkout Page** | --- |
 | 19 | From the Checkout page, I should be able to see the company name, name of items, quantity, individual, subtotal and grand total price. <br><br> | Pass |
